@@ -1,8 +1,33 @@
+﻿# dependencies
 node_modules/
-**/node_modules/
+api/node_modules/
 
+# build output
+dist/
+api/dist/
+build/
+
+# env & secrets
 .env
-**/.env
+api/.env
+*.env.local
 
-.env.local
-**/.env.local
+# prisma local DB
+api/prisma/dev.db
+api/prisma/dev.db-journal
+
+# logs
+*.log
+npm-debug.log*
+logs/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# coverage / cache
+coverage/
+.nyc_output/
+.cache/
