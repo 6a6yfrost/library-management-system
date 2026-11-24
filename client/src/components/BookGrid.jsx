@@ -13,7 +13,6 @@ export default function BookGrid({ genreId, search, sort }) {
     setError(null);
 
     const params = new URLSearchParams();
-    params.set('limit', '100');
     if (genreId) params.set('genreId', genreId);
     if (search) params.set('search', search);
 
@@ -25,7 +24,7 @@ export default function BookGrid({ genreId, search, sort }) {
         return res.json();
       })
       .then((data) => {
-        setBooks(Array.isArray(data) ? data : data.data ?? []);
+        setBooks(Array.isArray(data) ? data : data.data ?? data.books ?? []);
         setLoading(false);
       })
       .catch((err) => {

@@ -78,9 +78,9 @@ export default function BookDetail() {
           {genreName && <span className="book-genre">{genreName}</span>}
           <dl className="detail-meta">
             {book.publishedYear && (<><dt>Published</dt><dd>{book.publishedYear}</dd></>)}
-            {book.isbn &&          (<><dt>ISBN</dt><dd>{book.isbn}</dd></>)}
-            {book.pageCount &&     (<><dt>Pages</dt><dd>{book.pageCount}</dd></>)}
-            {book.publisher &&     (<><dt>Publisher</dt><dd>{book.publisher}</dd></>)}
+            {book.isbn && (<><dt>ISBN</dt><dd>{book.isbn}</dd></>)}
+            {book.pageCount && (<><dt>Pages</dt><dd>{book.pageCount}</dd></>)}
+            {book.publisher && (<><dt>Publisher</dt><dd>{book.publisher}</dd></>)}
           </dl>
           {book.description && (
             <div className="detail-description">

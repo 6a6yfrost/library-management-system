@@ -28,7 +28,9 @@ export default function HomePage() {
         >
           <option value="">All Genres</option>
           {genres.map((g) => (
-            <option key={g.id} value={g.id}>{g.name}</option>
+            <option key={g.id} value={g.id}>
+              {g.name}
+            </option>
           ))}
         </select>
         <select
